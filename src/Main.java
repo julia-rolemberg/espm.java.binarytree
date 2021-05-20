@@ -14,7 +14,13 @@ public class Main {
         System.out.println("impressao em ordem");
         arvore.emOrdem();
 
+
         System.out.println("Tamanho da árvore: "+ arvore.size()+"\n");
+
+        System.out.println();
+        System.out.println("Tamanho da árvore: "+ arvore.size());
+
+        System.out.println("Número de folhas: "+ arvore.contarFolhas());
 
         System.out.println("impressao das folhas");
         arvore.imprimirFolhas();

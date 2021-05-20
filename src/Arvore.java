@@ -76,7 +76,7 @@ public class Arvore {
     }
 
     private void imprimirFolhas_aux(No raiz) {
-        if(raiz == null) {
+        if (raiz == null) {
             return;
         }
 
@@ -88,5 +88,26 @@ public class Arvore {
         imprimirFolhas_aux(raiz.esq);
         imprimirFolhas_aux(raiz.dir);
 
+    }
+
+    public int contarFolhas(){
+        return contarFolhasAux(raiz);
+    }
+
+    private int contarFolhasAux(No raiz){
+        int n_folhas = 0;
+
+        if(raiz == null) {
+            return 0;
+        }
+
+        if(raiz.esq == null && raiz.dir == null){
+            return 1;
+        }
+
+        n_folhas += contarFolhasAux(raiz.esq);
+        n_folhas += contarFolhasAux(raiz.dir);
+
+        return n_folhas;
     }
 }
