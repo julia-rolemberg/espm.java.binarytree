@@ -1,6 +1,5 @@
 public class Main {
 
-
     public static void main(String[] args) {
         Arvore arvore = new Arvore();
 
@@ -15,7 +14,9 @@ public class Main {
         System.out.println("impressao em ordem");
         arvore.emOrdem();
 
-        System.out.println("Tamanho da árvore: "+ arvore.size());
-    }
+        System.out.println("Tamanho da árvore: "+ arvore.size()+"\n");
 
+        System.out.println("impressao das folhas");
+        arvore.imprimirFolhas();
+    }
 }

@@ -71,5 +71,22 @@ public class Arvore {
         return size;
     }
 
+    public void imprimirFolhas() {
+        imprimirFolhas_aux(raiz);
+    }
 
+    private void imprimirFolhas_aux(No raiz) {
+        if(raiz == null) {
+            return;
+        }
+
+        if(raiz.esq == null && raiz.dir == null) {
+            System.out.print(raiz.info+"\t");
+            return;
+        }
+
+        imprimirFolhas_aux(raiz.esq);
+        imprimirFolhas_aux(raiz.dir);
+
+    }
 }
