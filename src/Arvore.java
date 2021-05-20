@@ -51,6 +51,25 @@ public class Arvore {
         posOrdem_aux(raiz.dir);
         System.out.print(raiz.info+"\t");
 
-
     }
+
+
+    public int size(){
+        return size_aux(raiz);
+    }
+
+    private int size_aux(No raiz){
+        int size = 0;
+
+        if(raiz == null) {
+            return 0;
+        }else{
+            size+= size_aux(raiz.esq);
+            size++; //raiz
+            size+=size_aux(raiz.dir);
+        }
+        return size;
+    }
+
+
 }
